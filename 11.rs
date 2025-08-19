@@ -44,24 +44,10 @@ fn main() {
                 largest_product = down_product;
             }
 
-            // if height - line_size+1 >= line_size {
-            //     let up_product = grid[i][j] * grid[i-1][j] * grid[i-2][j] * grid[i-3][j];
-            //     if up_product > largest_product {
-            //         largest_product = up_product;
-            //     }
-            // }
-
             let right_product = grid[i][j] * grid[i+1][j] * grid[i+2][j] * grid[i+3][j];
             if right_product > largest_product {
                 largest_product = right_product;
             }
-
-            // if width - line_size+1 >= line_size {
-            //     let left_product = grid[i][j] * grid[i][j-1] * grid[i][j-2] * grid[i][j-3];
-            //     if left_product > largest_product {
-            //         largest_product = left_product;
-            //     }
-            // }
 
             if (i + line_size-1 < height) && (j + line_size-1 < width) {
                 let diag_product = grid[i][j] * grid[i+1][j+1] * grid[i+2][j+2] * grid[i+3][j+3];
