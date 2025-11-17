@@ -114,6 +114,7 @@ fn main() {
 
     for num in numbers {
         sum = sum + num;
+        // println!("Num: {}, Sum: {}", num, sum);
     }
 
     println!("The sum of 100 50-digit numbers is: {}", sum);
